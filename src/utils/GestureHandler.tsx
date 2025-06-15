@@ -111,7 +111,17 @@ export function GestureHandler({
   }
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <GestureDetector gesture={Gesture.Exclusive(swipeLeft, swipeRight)}>
+      <GestureDetector
+        gesture={Gesture.Exclusive(
+          swipeLeft,
+          swipeRight,
+          swipeUp,
+          swipeDown,
+          longPress,
+          doubleTap,
+          singleTap
+        )}
+      >
         <View style={{ width, height }}>{children}</View>
       </GestureDetector>
     </GestureHandlerRootView>
